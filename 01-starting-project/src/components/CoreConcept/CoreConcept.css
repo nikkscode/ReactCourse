@@ -23,3 +23,13 @@
   #core-concepts li p {
     font-size: 0.9rem;
   }
+
+  #core-concepts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
