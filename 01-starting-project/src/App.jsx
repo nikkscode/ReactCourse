@@ -9,9 +9,7 @@ function App() {
   const [ selectedTopic, setSelectedTopic ] = useState();
 
   function handleSelect(selectedButton){
-    // selectedButton => 'components','jsx', 'props', state'
     setSelectedTopic(selectedButton)
-    console.log(selectedTopic);
   }
   
   return (
@@ -21,10 +19,9 @@ function App() {
         <section id="core-concepts">
         <h2>Core Concepts</h2>
         <ul>
-          <CoreConcept {...CORE_CONCEPTS[0]}/>
-          <CoreConcept {...CORE_CONCEPTS[1]}/>
-          <CoreConcept {...CORE_CONCEPTS[2]}/>
-          <CoreConcept {...CORE_CONCEPTS[3]}/>
+          {CORE_CONCEPTS.map((conceptItem)=> (
+            <CoreConcept key={conceptItem.title} {...conceptItem}/>
+          ))}
         </ul>
         </section>
         
